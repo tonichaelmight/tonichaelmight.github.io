@@ -4,24 +4,30 @@ html {
 
 body {
     min-height: 100%;
+    width: 100%;
     background-image: radial-gradient(circle farthest-corner at 85% 75%,
     rgb(114, 51, 187) 0%,
     rgb(148, 102, 223) 60%,
-    rgb(194, 182, 240) 75%);
+    rgb(194, 182, 240) 90%);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header {
-    margin: 40px auto 0;
-    width: 75%;
+h1 {
+    width: 80%;
     text-align: center;
-}
-
-header > h1 {
-    width: 275px;
     margin: 0 auto;
     font-size: 48px;
     font-family: Caveat, sans-serif;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgb(231, 218, 250);
+}
+
+img {
+    background-color: black;
+    width: 360px;
+    display: block;
+    margin: 20px auto;
+    border: 5px solid rgb(206, 105, 209);
+    border-radius: 5px;
 }
