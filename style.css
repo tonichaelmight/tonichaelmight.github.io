@@ -24,8 +24,14 @@ header {
 }
 
 header > h1 {
+    width: 275px;
+    margin: 0 auto;
     font-size: 48px;
     font-family: Caveat, sans-serif;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgb(231, 218, 250);
+}
+
+header > h1:hover {
+    color: rgb(244, 236, 255);
 }
