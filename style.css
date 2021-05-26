@@ -1,0 +1,7 @@
+body {
+    background-image: radial-gradient(cirle at 20% 20% farthest corner,
+    rgb(45, 27, 77),
+    rgb(83, 158, 228),
+    rgb(206, 255, 251)
+    );
+}
