@@ -1,7 +1,13 @@
 body {
-    background-image: radial-gradient(cirle at 20% 20% farthest corner,
-    rgb(45, 27, 77),
-    rgb(83, 158, 228),
-    rgb(206, 255, 251)
+    background: radial-gradient(circle farthest-corner at 20% 20%,
+    rgba(41, 43, 163, 0.8) 0%,
+    rgba(60, 154, 241, 0.6) 50%,
+    rgba(145, 238, 230, 0.1) 100%
+    ),
+    radial-gradient(circle farthest-corner at 80% 80%,
+    rgba(114, 51, 187, 0.8) 0%,
+    rgba(148, 102, 223, 0.6) 50%,
+    rgba(195, 182, 240, 0.1) 100%
     );
-}
+},
+
