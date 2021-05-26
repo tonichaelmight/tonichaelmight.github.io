@@ -18,16 +18,16 @@ h1 {
     text-align: center;
     margin: 0 auto;
     font-size: 48px;
-    font-family: Caveat, sans-serif;
+    font-family: Verdana, sans-serif;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgb(231, 218, 250);
 }
 
 img {
-    background-color: black;
+    background-color: rgb(237, 169, 240);
     width: 360px;
     display: block;
     margin: 20px auto;
-    border: 5px solid rgb(206, 105, 209);
+    border: 5px solid rgb(237, 169, 240);
     border-radius: 5px;
 }
