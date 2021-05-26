@@ -11,8 +11,8 @@ body {
     rgba(145, 238, 230, 0.1) 75%
     ),
     radial-gradient(circle farthest-corner at 0% 100%,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 60%,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 60%,
     rgba(0, 0, 0, 0) 75%
     );
 }
@@ -24,8 +24,8 @@ header {
 }
 
 header > h1 {
-    font-size: 40px;
+    font-size: 48px;
     font-family: Caveat, sans-serif;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgb(229, 212, 255);
+    text-shadow: 2px 2px 4px rgb(231, 218, 250);
 }
