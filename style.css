@@ -1,5 +1,10 @@
+html {
+    height: 100%;
+}
+
 body {
-    background: 
+    min-height: 100%;
+    background-image: 
     radial-gradient(circle farthest-corner at 85% 75%,
     rgba(114, 51, 187, 0.9) 0%,
     rgba(148, 102, 223, 0.5) 60%,
@@ -13,8 +18,9 @@ body {
     radial-gradient(circle farthest-corner at 0% 100%,
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.6) 60%,
-    rgba(0, 0, 0, 0) 75%
+    rgba(0, 0, 0, 0) 90%
     );
+    background-repeat: no-repeat;
 }
 
 header {
