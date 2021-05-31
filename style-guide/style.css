@@ -24,12 +24,11 @@ body {
 
 header {
     margin: 40px auto 0;
-    width: 75%;
+    width: 80%;
     text-align: center;
 }
 
 header > h1 {
-    width: 275px;
     margin: 0 auto;
     font-size: 48px;
     font-family: Caveat, sans-serif;
@@ -39,4 +38,18 @@ header > h1 {
 
 header > h1:hover {
     color: rgb(244, 236, 255);
+}
+
+
+article {
+    width: 80%;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border: 5px solid white;
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+article h2 {
+    color: white;
+    font-family: sans-serif;
 }
