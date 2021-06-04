@@ -3,13 +3,13 @@ html {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 455px) {
     html {
         font-size: 16px;
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 370px) {
     html {
         font-size: 12px;
     }
@@ -38,50 +38,51 @@ body {
 }
 
 header {
-    margin: 2rem auto;
+    margin: 1rem auto 2rem;
     text-align: center;
 }
 
 h1 {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 0.7rem 0 1rem;
     font-size: 2.4rem;
     font-family: Caveat, sans-serif;
-    letter-spacing: 1px;
-    text-shadow: 5px 5px 15px rgb(41, 41, 41),
+    text-shadow: 4px 4px 20px rgb(41, 41, 41),
                  2px 2px 8px rgb(240, 231, 253);
+    padding: 0.65rem 0 1rem;
+}
+
+h1,
+footer h2 {
+    max-width: 60%;
+    margin: 0 auto;
+    letter-spacing: 1px;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-radius: 2px;
-    line-height: 0.8;
     background-color: rgba(160, 160, 160, 0.1);
-    box-shadow: 0 0 50px rgba(157, 237, 255, 0.8);
 }
 
 main {
+    max-width: 1400px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 2rem 1rem;
+    margin: 2rem 2rem 0;
     font-family: Oxygen, sans-serif;
 }
 
 section {
-    min-width: 15rem;
-    max-width: 25rem;
+    min-width: 20rem;
+    max-width: 30rem;
     padding: 1rem;
-    margin: 0 2rem 2rem;
+    margin: 0 1rem 2rem;
     flex: 1 1;
     border: 2px solid black;
     letter-spacing: 1px;
     background-color: rgba(255, 255, 255, 0.275);
     box-shadow: 3px 3px 8px black;
 }
-
-
 
 section h2 {
     font-size: 2rem;
@@ -98,9 +99,27 @@ section p {
     font-weight: 300;
 }
 
-@media only screen and (max-width: 510px) {
+footer {
+    margin: 0 0 40px;
+    width: 100%;
+    text-align: center;
+}
 
-    h1 {
+footer::after {
+    content: '';
+    display: block;
+    height: 20px;
+}
+
+footer h2 {
+    padding: 0.8rem 0;
+    font-family: Oxygen, sans-serif;
+}
+
+@media only screen and (max-width: 520px) {
+
+    h1,
+    footer h2 {
         max-width: 100%;
         border-left: none;
         border-right: none;
@@ -108,7 +127,7 @@ section p {
     }
 
     main {
-        margin: 2rem 0;
+        margin: 2rem 0 0;
     }
 
     section {
@@ -121,4 +140,10 @@ section p {
         box-shadow: 0px 0px 15px rgba(41, 41, 41, 0.4);
     }
 
+}
+
+@media only screen and (min-width: 1480px) {
+    main {
+        margin: 2rem auto 0;
+    }
 }
