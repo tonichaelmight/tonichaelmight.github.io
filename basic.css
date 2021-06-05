@@ -100,9 +100,10 @@ footer {
 }
 
 hr {
-    border: 1px solid rgba(77, 47, 121, 0.9);
-    background-color: rgba(77, 47, 121, 0.9);
+    border: 1px solid rgba(47, 28, 90, 0.75);
+    background-color: rgba(47, 28, 90, 0.75);
     margin: 1rem 0;
+    box-shadow: 0 0 2px rgb(201, 178, 255);
 }
 
 footer::after {

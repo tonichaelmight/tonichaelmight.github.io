@@ -25,11 +25,21 @@ section h3 {
 }
 
 section h4 {
-    margin-top: 1rem;
+    margin: 1.2rem 0 0.5rem;
 }
 
-section li {
+section ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 1rem 0.5rem 0;
+}
 
+section ul li {
+    margin: 0.5rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 
