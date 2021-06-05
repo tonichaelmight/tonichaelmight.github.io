@@ -1,58 +1,16 @@
-html {
-    height: 100%;
+@media only screen and (max-width: 455px) {
+    html {
+        font-size: 16px;
+    }
 }
 
-body {
-    min-height: 100%;
-    background-image: 
-    radial-gradient(circle farthest-corner at 85% 75%,
-    rgba(114, 51, 187, 0.9) 0%,
-    rgba(148, 102, 223, 0.5) 60%,
-    rgba(195, 182, 240, 0.1) 75%
-    ),
-    radial-gradient(circle farthest-corner at 10% 10%,
-    rgba(41, 43, 163, 0.9) 0%,
-    rgba(60, 154, 241, 0.5) 50%,
-    rgba(145, 238, 230, 0.1) 75%
-    ),
-    radial-gradient(circle farthest-corner at 0% 100%,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.6) 60%,
-    rgba(0, 0, 0, 0) 90%
-    );
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+@media only screen and (max-width: 370px) {
+    html {
+        font-size: 12px;
+    }
 }
 
-
-header {
-    margin: 40px auto;
-    width: 80%;
-    text-align: center;
-}
-
-header > h1 {
-    margin: 0 auto;
-    font-size: 48px;
-    font-family: Caveat, sans-serif;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgb(231, 218, 250);
-}
-
-header > h1:hover {
-    color: rgb(244, 236, 255);
-}
-
-main {
-    font-family: sans-serif;
-}
-
-
-article {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 30px 20px 0;
+section {
     border: 5px solid white;
     border-radius: 10px;
     background-color: hsla(270, 80%, 15%, 0.3);
@@ -61,32 +19,30 @@ article {
 }
 
 @media only screen and (max-width: 660px) {
-    article {
-        margin: 20px 25px;
+    section {
+        margin: 1rem 1.2rem;
     }
 }
 
-article h2 {
+section h2 {
     color: white;
-    font-family: sans-serif;
-    font-size: 32px;
     border-bottom: 2px double white;
+    padding-bottom: 5px;
 }
 
 .flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
-    margin: 15px 20px;
 }
 
 .flex-container .flex-item {
     min-width: 150px;
     text-align: center;
     border: 3px solid rgba(0, 0, 0, 0.7);
-    margin: 15px;
+    margin: 1.5rem 0.75rem 0;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .fonts .flex-item {
@@ -94,7 +50,7 @@ article h2 {
 }
 
 .flex-item p {
-    margin: 20px 15px;
+    margin: 1rem 0.75rem;
     letter-spacing: 1px;
 }
 
@@ -103,8 +59,7 @@ article h2 {
 }
 
 .flex-item h3 {
-    margin: 20px 15px;
-    font-size: 28px;
+    margin: 1rem 0.75rem;
 }
 
 .fonts h3 {
@@ -134,6 +89,14 @@ article h2 {
     font-family: Caveat;
 }
 
+.oxygen {
+    font-family: Oxygen;
+}
+
+.teko {
+    font-family: Teko;
+}
+
 .crazy h3 {
     text-shadow: 0 0 10px white;
 }
@@ -152,4 +115,37 @@ article h2 {
     font-weight: bold;
     color: white;
     text-shadow: 0 0 15px rgb(136, 221, 250);
+}
+
+@media only screen and (max-width: 520px) {
+
+    h1,
+    footer h2 {
+        max-width: 100%;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    main {
+        margin: 2rem 0 0;
+    }
+
+    section {
+        max-width: 100%;
+        margin: 0 0 2rem;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+        box-shadow: 0px 0px 15px rgba(41, 41, 41, 0.4);
+    }
+
+}
+
+@media only screen and (min-width: 1480px) {
+    main {
+        margin: 2rem auto 0;
+    }
 }
