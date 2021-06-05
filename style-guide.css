@@ -11,6 +11,7 @@
 }
 
 section {
+    padding: 1rem 0.5rem;
     border: 5px solid white;
     border-radius: 10px;
     background-color: hsla(270, 80%, 15%, 0.3);
@@ -28,6 +29,7 @@ section h2 {
     color: white;
     border-bottom: 2px double white;
     padding-bottom: 5px;
+    margin: 0 0.5rem;
 }
 
 .flex-container {
@@ -40,7 +42,7 @@ section h2 {
     min-width: 150px;
     text-align: center;
     border: 3px solid rgba(0, 0, 0, 0.7);
-    margin: 1.5rem 0.75rem 0;
+    margin: 1.5rem 0.5rem 0;
     flex-grow: 1;
     font-size: 1rem;
 }
@@ -139,7 +141,7 @@ section h2 {
         border-right: none;
         border-left: none;
         border-radius: 0;
-        box-shadow: 0px 0px 15px rgba(41, 41, 41, 0.4);
+        box-shadow: 0px 0px 15px rgba(211, 211, 211, 0.4);
     }
 
 }
