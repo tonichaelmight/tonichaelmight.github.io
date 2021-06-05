@@ -47,7 +47,7 @@ footer h2 {
     border-bottom: 5px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgba(160, 160, 160, 0.25);
 }
 
@@ -73,6 +73,16 @@ section h2 {
     font-size: 2rem;
 }
 
+a {
+    text-decoration: none;
+    color: rgba(222, 201, 255, 0.9);
+    text-shadow: 0 0 1px rgb(111, 111, 111);
+}
+
+a:visited {
+    color: rgba(77, 47, 121, 0.9);
+}
+
 section h3 {
     font-size: 1.4rem;
 }
@@ -80,12 +90,19 @@ section h3 {
 section p {
     font-size: 1rem;
     font-weight: 300;
+    line-height: 1.25;
 }
 
 footer {
     margin: 0 0 40px;
     width: 100%;
     text-align: center;
+}
+
+hr {
+    border: 1px solid rgba(77, 47, 121, 0.9);
+    background-color: rgba(77, 47, 121, 0.9);
+    margin: 1rem 0;
 }
 
 footer::after {
