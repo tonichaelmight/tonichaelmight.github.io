@@ -33,8 +33,7 @@ header {
 h1 {
     font-size: 2.4rem;
     font-family: Caveat, sans-serif;
-    text-shadow: 4px 4px 20px rgb(41, 41, 41),
-                 2px 2px 8px rgb(240, 231, 253);
+    text-shadow: 1px 1px 8px rgb(240, 231, 253);
     padding: 0.65rem 0 1rem;
 }
 
@@ -77,10 +76,15 @@ a {
     text-decoration: none;
     color: rgba(222, 201, 255, 0.9);
     text-shadow: 0 0 1px rgb(111, 111, 111);
+    transition: color 0.5s;
 }
 
 a:visited {
     color: rgba(77, 47, 121, 0.9);
+}
+
+a:hover {
+    color: rgba(230, 217, 251, 0.9);
 }
 
 section h3 {
@@ -94,7 +98,7 @@ section p {
 }
 
 footer {
-    margin: 0 0 40px;
+    margin: 0;
     width: 100%;
     text-align: center;
 }
