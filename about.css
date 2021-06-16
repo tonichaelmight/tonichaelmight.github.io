@@ -34,3 +34,16 @@ header nav ul li {
 hr {
     display: none;
 }
+
+main {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#content {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 0.5rem;
+}

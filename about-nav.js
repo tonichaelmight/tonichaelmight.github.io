@@ -1,9 +1,29 @@
-const workObj = {el: document.getElementById('work'), active: false};
-const educationObj = {el: document.getElementById('education'), active: false};
-const skillsObj = {el: document.getElementById('skills'), active: false};
-const bioObj = {el: document.getElementById('bio'), active: false};
+const workObj = {
+    el: document.getElementById('work'), 
+    active: false, 
+    text: ''
+};
 
-// make this an object
+const educationObj = {
+    el: document.getElementById('education'), 
+    active: false, 
+    text: ''
+};
+
+const skillsObj = {
+    el: document.getElementById('skills'), 
+    active: false, 
+    text: ''
+};
+
+const bioObj = {
+    el: document.getElementById('bio'), 
+    active: false, 
+    text: '<p>My name is Michael. I am a 26-year old aspiring programmer from Central Virginia.</p>'
+};
+
+
+// tabs object
 const tabs = {
     work: workObj, 
     education: educationObj, 
@@ -11,6 +31,10 @@ const tabs = {
     bio: bioObj
 };
 
+const content = document.getElementById('content');
+console.log(content);
+
+// reset all to default
 const clear = () => {
 
     for (tab in tabs) {
@@ -27,7 +51,7 @@ const highlight = (event) => {
     }
 
     event.target.style.color = 'rgb(229, 229, 229)';
-    event.target.style.textShadow = '2px 2px 0 rgb(70, 70, 70)';
+    event.target.style.textShadow = '2px 2px 0 rgb(36, 36, 36)';
 }
 
 const unhighlight = (event) => {
@@ -43,7 +67,8 @@ const activate = (event) => {
     clear();
 
     event.target.style.color = 'rgb(227, 152, 255)';
-    event.target.style.textShadow = '2px 2px 3px rgb(70, 70, 70)';
+    event.target.style.textShadow = '2px 2px 3px rgb(36, 36, 36)';
+    content.innerHTML = tabs[event.target.id].text;
     tabs[event.target.id].active = true;
 }
 
