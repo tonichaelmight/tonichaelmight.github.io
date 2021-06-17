@@ -32,10 +32,9 @@ const tabs = {
 };
 
 const content = document.getElementById('content');
-console.log(content);
 
 // reset all to default
-const clear = () => {
+const clearTabs = () => {
 
     for (tab in tabs) {
         tabs[tab].el.style.color = 'black';
@@ -63,8 +62,8 @@ const unhighlight = (event) => {
     event.target.style.textShadow = '0 0 0 rgb(70, 70, 70)';
 } 
 
-const activate = (event) => {
-    clear();
+const activateTab = (event) => {
+    clearTabs();
 
     event.target.style.color = 'rgb(227, 152, 255)';
     event.target.style.textShadow = '2px 2px 3px rgb(36, 36, 36)';
@@ -75,5 +74,5 @@ const activate = (event) => {
 for (tab in tabs) {
     tabs[tab].el.addEventListener('mouseover', highlight, false);
     tabs[tab].el.addEventListener('mouseout', unhighlight, false);
-    tabs[tab].el.addEventListener('click', activate, false);
+    tabs[tab].el.addEventListener('click', activateTab, false);
 }

@@ -18,10 +18,6 @@ header nav {
     border: 2px solid rgb(174, 174, 174);
 }
 
-header nav ul {
-
-}
-
 header nav ul li {
     display: inline-block;
     font-family: Oxygen, sans-serif;
@@ -41,9 +37,51 @@ main {
 }
 
 #content {
+    font-family: Oxygen, sans-serif;
     max-width: 90%;
     height: auto;
     margin: 0 auto;
     border: 1px solid black;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
+    letter-spacing: 1px;
+}
+
+.institution h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+.institution h3 {
+    font-size: 1.4rem;
+}
+
+/*EDUCATION*/
+.institution {
+    padding: 0 0.5rem;
+    margin: 1rem 0.5rem;
+    border: 1px solid black;
+    background-color: rgba(50, 50, 50, 0.2);
+}
+
+.institution > * {
+    margin: 0.5rem 0;
+}
+
+.classList dt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0.8rem 0 0.2rem;
+}
+
+.arrow {
+    margin-left: 0.5rem;
+    height: 0;
+    width: 0;
+    content: '';
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+    display: inline-block;
 }
