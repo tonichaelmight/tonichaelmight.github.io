@@ -1,4 +1,4 @@
-@media only screen and (max-width: 455px) {
+@media only screen and (max-width: 840px) {
     html {
         font-size: 16px;
     }
@@ -67,18 +67,26 @@ main {
     z-index: 5;
 }
 
-.institution-header {
-    margin-bottom: 0.5rem;
+.institution-info {
+    width: 80%;
+    display: inline-block;
+}
+
+.institution hr {
+    display: block;
 }
 
 .institution h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-block;
+    max-width: fit-content;
+    margin-bottom: 0.7rem;
 }
 
 .institution h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .institution p {
@@ -87,28 +95,35 @@ main {
 
 .expanded {
     opacity: 0;
-    transition: opacity 1s, display 1s;
+    transition: opacity 1.5s;
+    margin-top: 1.2rem;
 }
 
 .classList dt {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.3rem;
     text-decoration: underline;
     margin: 0.8rem 0 0.4rem;
 }
 
 .arrow-container {
-    display: inline-block;
     margin-left: 0.2rem;
+    width: 10%;
+    height: 100%;
+    display: inline-block;
 }
 
 .arrow {
+    vertical-align: middle;
     height: 0;
     width: 0;
     content: '';
-    border-top: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid transparent;
-    border-left: 0.5rem solid black;
+    border-top: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1.5rem solid black;
     transition: border-left 0.5s, border-top 0.5s, transform 0.5s;
+}
+
+.clearfix {
+    display: block;
 }
