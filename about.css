@@ -46,42 +46,69 @@ main {
     letter-spacing: 1px;
 }
 
+/*EDUCATION*/
+.institution {
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 0.5rem;
+    position: relative;
+    border: 1px solid black;
+    background-color: rgba(50, 50, 50, 0.2);
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.click-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    z-index: 5;
+}
+
+.institution-header {
+    margin-bottom: 0.5rem;
+}
+
 .institution h2 {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 2rem;
     display: inline-block;
 }
 
 .institution h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
-/*EDUCATION*/
-.institution {
-    padding: 0 0.5rem;
-    margin: 1rem 0.5rem;
-    border: 1px solid black;
-    background-color: rgba(50, 50, 50, 0.2);
+.institution p {
+    line-height: 1.1;
 }
 
-.institution > * {
-    margin: 0.5rem 0;
+.expanded {
+    opacity: 0;
+    transition: opacity 1s, display 1s;
 }
 
 .classList dt {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-decoration: underline;
-    margin: 0.8rem 0 0.2rem;
+    margin: 0.8rem 0 0.4rem;
+}
+
+.arrow-container {
+    display: inline-block;
+    margin-left: 0.2rem;
 }
 
 .arrow {
-    margin-left: 0.5rem;
     height: 0;
     width: 0;
     content: '';
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid black;
-    display: inline-block;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid black;
+    transition: border-left 0.5s, border-top 0.5s, transform 0.5s;
 }
