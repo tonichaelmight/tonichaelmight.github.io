@@ -48,13 +48,14 @@ main {
 
 /*EDUCATION*/
 .institution {
+    height: 0.5rem;
     padding: 0.5rem 0.5rem;
     margin: 1rem 0.5rem;
     position: relative;
     border: 1px solid black;
     background-color: rgba(50, 50, 50, 0.2);
     overflow: hidden;
-    transition: height 1s;
+    transition: height 0.8s;
 }
 
 .click-panel {
@@ -68,7 +69,7 @@ main {
 }
 
 .institution-info {
-    width: 85%;
+    width: 80%;
     display: inline-block;
 }
 
@@ -99,25 +100,32 @@ main {
     margin-top: 1.2rem;
 }
 
-.classList dt {
+.education-list dt {
     font-size: 1.3rem;
     text-decoration: underline;
     margin: 0.8rem 0 0.4rem;
 }
 
+.education-list li {
+    margin: 0.5rem 0;
+}
+
 .arrow-container {
-    margin-left: 0.2rem;
-    width: 10%;
+    width: 12%;
     height: 100%;
-    display: inline-block;
+    float: right;
 }
 
 .arrow {
-    height: 1.5rem;
-    width: 2rem;
-    background-color: black;
-    transition: transform 0.5s;
+    position: relative;
+    height: 0;
+    width: 0;
+    transition: transform 0.5s, border-color 0.5s;
+    border-left: 1rem solid black;
+    border-top: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid transparent;
     margin: 0 auto;
+    vertical-align: middle;
 }
 
 .clearfix {

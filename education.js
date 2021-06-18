@@ -1,24 +1,43 @@
 const institutions = document.getElementsByClassName('institution');
 
+const initializeEducation = () => {
+
+    for (institution of institutions) {
+
+        const expanded = institution.getElementsByClassName('expanded')[0];
+        const arrowContainer = institution.getElementsByClassName('arrow-container')[0];
+        const arrow = institution.getElementsByClassName('arrow')[0];
+
+        const institutionInfoHeight = institution.getElementsByClassName('institution-info')[0].scrollHeight.toString();
+
+        expanded.style.opacity = '0';
+        arrowContainer.style.height = institutionInfoHeight + 'px';
+        institution.style.height = institutionInfoHeight + 'px';
+        arrow.style.margin = 'calc((' + institutionInfoHeight + 'px - 2.4rem) / 2) auto';
+
+    }
+
+}
+
 const resetInstitutions = () => {
     for (institution of institutions) {
         const expanded = institution.getElementsByClassName('expanded')[0];
         const arrow = institution.getElementsByClassName('arrow')[0];
         arrow.style.transform = 'rotate(0deg)';
-        arrow.style.backgroundColor = 'black';
+        arrow.style.borderLeft = '1rem solid black';
         expanded.style.opacity = '0';
         institution.style.height = institution.getElementsByClassName('always-up')[0].scrollHeight.toString() + 'px';
     }
 }
 
-resetInstitutions();
+setTimeout(initializeEducation(), 500);
 
 const highlightArrow = (event) => {
     const institution = event.target.parentElement;
     const expanded = institution.getElementsByClassName('expanded')[0];
     const arrow = institution.getElementsByClassName('arrow')[0];
     if (expanded.style.opacity === '0') {
-        arrow.style.backgroundColor = 'white';
+        arrow.style.borderLeft = '1rem solid white';
     }
 }
 
@@ -27,7 +46,7 @@ const unhighlightArrow = (event) => {
     const expanded = institution.getElementsByClassName('expanded')[0];
     const arrow = institution.getElementsByClassName('arrow')[0];
     if (expanded.style.opacity === '0') {
-        arrow.style.backgroundColor = 'black';
+        arrow.style.borderLeft = '1rem solid black';
     }
 }
 
@@ -40,11 +59,11 @@ const activateInstitution = (event) => {
         resetInstitutions();
     
         arrow.style.transform = 'rotate(90deg)';
-        arrow.style.backgroundColor = 'white';
+        arrow.style.borderLeft = '1rem solid rgb(161, 120, 185)';
     
         expanded.style.opacity = '1';
 
-        institution.style.height = institution.scrollHeight.toString() + 'px';
+        institution.style.height = institution.getElementsByClassName('institution-wrapper')[0].scrollHeight.toString() + 'px';
 
     }
 }
@@ -55,3 +74,21 @@ for (institution of institutions) {
     clickPanel.addEventListener('mouseleave', unhighlightArrow, false)
     clickPanel.addEventListener('click', activateInstitution, false);
 }
+
+const resizeInstitutions = () => {
+    for (institution of institutions) {
+        const arrowContainer = institution.getElementsByClassName('arrow-container')[0];
+        const arrow = institution.getElementsByClassName('arrow')[0];
+
+        arrowContainer.style.height = institution.getElementsByClassName('institution-info')[0].scrollHeight.toString() + 'px';
+        arrow.style.margin = 'calc((' + institution.getElementsByClassName('institution-info')[0].scrollHeight.toString() + 'px - 2.4rem) / 2) auto';
+
+        if(institution.getElementsByClassName('expanded')[0].style.opacity > 0) {
+            institution.style.height = institution.getElementsByClassName('institution-wrapper')[0].scrollHeight.toString() + 'px';
+        } else {
+            institution.style.height = institution.getElementsByClassName('institution-info')[0].scrollHeight.toString() + 'px';
+        }
+    }
+}
+
+window.addEventListener('resize', resizeInstitutions, false);
