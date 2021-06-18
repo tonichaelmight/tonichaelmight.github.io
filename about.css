@@ -39,18 +39,24 @@ main {
 #content {
     font-family: Oxygen, sans-serif;
     max-width: 90%;
-    height: auto;
+    height: 0;
     margin: 0 auto;
     border: 1px solid black;
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
     letter-spacing: 1px;
+}
+
+#work-content,
+#education-content,
+#skills-content,
+#bio-content {
 }
 
 /*EDUCATION*/
 .institution {
     height: 0.5rem;
     padding: 0.5rem 0.5rem;
-    margin: 1rem 0.5rem;
+    margin: 0.5rem 0.5rem;
     position: relative;
     border: 1px solid black;
     background-color: rgba(50, 50, 50, 0.2);

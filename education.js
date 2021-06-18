@@ -1,6 +1,8 @@
 const institutions = document.getElementsByClassName('institution');
 
-const initializeEducation = () => {
+const educationContent = document.getElementById('education-content');
+
+const educationInitialize = () => {
 
     for (institution of institutions) {
 
@@ -30,7 +32,7 @@ const resetInstitutions = () => {
     }
 }
 
-setTimeout(initializeEducation(), 500);
+setTimeout(educationInitialize(), 500);
 
 const highlightArrow = (event) => {
     const institution = event.target.parentElement;
