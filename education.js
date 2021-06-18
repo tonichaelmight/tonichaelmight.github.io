@@ -4,8 +4,8 @@ const resetInstitutions = () => {
     for (institution of institutions) {
         const expanded = institution.getElementsByClassName('expanded')[0];
         const arrow = institution.getElementsByClassName('arrow')[0];
-        arrow.style.borderLeft = '1.5rem solid black';
         arrow.style.transform = 'rotate(0deg)';
+        arrow.style.backgroundColor = 'black';
         expanded.style.opacity = '0';
         institution.style.height = institution.getElementsByClassName('always-up')[0].scrollHeight.toString() + 'px';
     }
@@ -18,7 +18,7 @@ const highlightArrow = (event) => {
     const expanded = institution.getElementsByClassName('expanded')[0];
     const arrow = institution.getElementsByClassName('arrow')[0];
     if (expanded.style.opacity === '0') {
-        arrow.style.borderLeft = '1.5rem solid white';
+        arrow.style.backgroundColor = 'white';
     }
 }
 
@@ -27,7 +27,7 @@ const unhighlightArrow = (event) => {
     const expanded = institution.getElementsByClassName('expanded')[0];
     const arrow = institution.getElementsByClassName('arrow')[0];
     if (expanded.style.opacity === '0') {
-        arrow.style.borderLeft = '1.5rem solid black';
+        arrow.style.backgroundColor = 'black';
     }
 }
 
@@ -39,8 +39,8 @@ const activateInstitution = (event) => {
     if (expanded.style.opacity === '0') {
         resetInstitutions();
     
-        arrow.style.borderLeft = '1.5rem solid white';
         arrow.style.transform = 'rotate(90deg)';
+        arrow.style.backgroundColor = 'white';
     
         expanded.style.opacity = '1';
 
