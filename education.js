@@ -16,6 +16,8 @@ const educationInitialize = () => {
         arrowContainer.style.height = institutionInfoHeight + 'px';
         institution.style.height = institutionInfoHeight + 'px';
         arrow.style.margin = 'calc((' + institutionInfoHeight + 'px - 2.4rem) / 2) auto';
+        arrow.style.transform = 'rotate(0deg)';
+        arrow.style.borderLeft = '1rem solid black';
 
     }
 
@@ -25,14 +27,13 @@ const resetInstitutions = () => {
     for (institution of institutions) {
         const expanded = institution.getElementsByClassName('expanded')[0];
         const arrow = institution.getElementsByClassName('arrow')[0];
+
         arrow.style.transform = 'rotate(0deg)';
         arrow.style.borderLeft = '1rem solid black';
         expanded.style.opacity = '0';
         institution.style.height = institution.getElementsByClassName('always-up')[0].scrollHeight.toString() + 'px';
     }
 }
-
-setTimeout(educationInitialize(), 500);
 
 const highlightArrow = (event) => {
     const institution = event.target.parentElement;

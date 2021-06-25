@@ -71,7 +71,14 @@ const activateTab = (event) => {
     document.getElementById(event.target.id + '-content').hidden = false;
     currentTab = event.target.id;
     content.style.height = 'auto';
-    eval(event.target.id + 'Initialize()');
+
+    try {
+        eval(event.target.id + 'Initialize()');
+    }
+    catch(e) {
+        return;
+    }
+    
 }
 
 for (tab in tabs) {
