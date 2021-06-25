@@ -1,21 +1,25 @@
 const workObj = {
     el: document.getElementById('work'),
-    content: document.getElementById('work-content')
+    content: document.getElementById('work-content'),
+    initialized: false
 };
 
 const educationObj = {
     el: document.getElementById('education'),
-    content: document.getElementById('education-content')
+    content: document.getElementById('education-content'),
+    initialized: false
 };
 
 const skillsObj = {
     el: document.getElementById('skills'),
-    content: document.getElementById('skills-content')
+    content: document.getElementById('skills-content'),
+    initialized: false
 };
 
 const bioObj = {
     el: document.getElementById('bio'),
-    content: document.getElementById('bio-content')
+    content: document.getElementById('bio-content'),
+    initialized: false
 };
 
 
@@ -72,11 +76,15 @@ const activateTab = (event) => {
     currentTab = event.target.id;
     content.style.height = 'auto';
 
-    try {
-        eval(event.target.id + 'Initialize()');
-    }
-    catch(e) {
-        return;
+    if (!tabs[event.target.id].initialized) {
+        try {
+            eval(event.target.id + 'Initialize()');
+        }
+        catch(e) {
+            return;
+        }
+
+        tabs[event.target.id].initialized = true;
     }
     
 }
