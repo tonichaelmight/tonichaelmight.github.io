@@ -68,8 +68,6 @@ const unhighlightTab = (event) => {
 const activateTab = (event) => {
     clearTabs();
 
-    console.log(document.getElementById(event.target.id + '-content'));
-
     event.target.style.color = 'rgb(227, 152, 255)';
     event.target.style.textShadow = '2px 2px 3px rgb(36, 36, 36)';
     document.getElementById(event.target.id + '-content').hidden = false;
