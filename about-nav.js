@@ -35,18 +35,6 @@ let currentTab;
 
 const content = document.getElementById('content');
 
-// reset all to default
-const clearTabs = () => {
-
-    for (tab in tabs) {
-        tabs[tab].el.style.color = 'black';
-        tabs[tab].el.style.textShadow = '0 0 0 rgb(70, 70, 70)';
-        tabs[tab].active = false;
-        tabs[tab].content.hidden = true;
-    }
-    
-};
-
 const highlightTab = (event) => {
     if (currentTab === event.target.id) {
         return;
@@ -66,23 +54,39 @@ const unhighlightTab = (event) => {
 } 
 
 const activateTab = (event) => {
-    clearTabs();
+
+    if (currentTab) {
+        tabs[currentTab].el.style.color = 'black';
+        tabs[currentTab].el.style.textShadow = '0 0 0 rgb(70, 70, 70)';
+        tabs[currentTab].active = false;  
+
+        try {
+            eval(currentTab + 'Close();');
+        } catch(e) {
+            console.log('ope');
+        }
+        
+    }
 
     event.target.style.color = 'rgb(227, 152, 255)';
     event.target.style.textShadow = '2px 2px 3px rgb(36, 36, 36)';
-    document.getElementById(event.target.id + '-content').hidden = false;
     currentTab = event.target.id;
     content.style.height = 'auto';
 
     if (!tabs[event.target.id].initialized) {
         try {
-            eval(event.target.id + 'Initialize()');
+            eval(event.target.id + 'Initialize();');
+        } catch(e) {
+            console.log('oop');
         }
-        catch(e) {
-            return;
-        }
-
+        
         tabs[event.target.id].initialized = true;
+    } else {
+        try {
+            eval(event.target.id + 'Reopen();');
+        } catch(e) {
+            console.log('oop');
+        }
     }
     
 }

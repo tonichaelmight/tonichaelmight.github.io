@@ -12,15 +12,59 @@ const educationInitialize = () => {
 
         const institutionInfoHeight = institution.getElementsByClassName('institution-info')[0].scrollHeight.toString();
 
+        institution.style.opacity = '1';
         expanded.style.opacity = '0';
         arrowContainer.style.height = institutionInfoHeight + 'px';
         institution.style.height = institutionInfoHeight + 'px';
         arrow.style.margin = 'calc((' + institutionInfoHeight + 'px - 2.4rem) / 2) auto';
         arrow.style.transform = 'rotate(0deg)';
         arrow.style.borderLeft = '1rem solid black';
+        educationContent.style.height = 'auto';
 
     }
 
+}
+
+const educationReopen = () => {
+
+    for (institution of institutions) {
+
+        const institutionInfoHeight = institution.getElementsByClassName('institution-info')[0].scrollHeight.toString();
+        
+        institution.style.height = institutionInfoHeight + 'px';
+        institution.style.opacity = '1';
+        educationContent.style.height = 'auto';
+
+    }
+
+}
+
+const reduceHeight = (h) => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(h-2);
+        }, 1);
+    })
+}
+
+const squashContent = async () => {
+    let currHeight = educationContent.scrollHeight;
+    educationContent.style.height = currHeight + 'px';
+    while (currHeight > 0) {
+        currHeight = await reduceHeight(currHeight);
+        educationContent.style.height = currHeight + 'px';
+    }
+}
+
+const educationClose = () => {
+    for (institution of institutions) {
+        institution.style.height = '0';
+        institution.style.opacity = '0';
+
+        setTimeout(() => {
+            squashContent();
+        }, 500);
+    }
 }
 
 const resetInstitutions = () => {

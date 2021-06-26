@@ -44,24 +44,29 @@ main {
     border: 1px solid black;
     padding: 0.5rem 0.5rem;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 
 #work-content,
 #education-content,
 #skills-content,
 #bio-content {
+    height: 0;
+    overflow: hidden;
 }
 
 /*EDUCATION*/
-.institution {
-    height: 0.5rem;
+.institution,
+.company {
+    opacity: 0;
+    height: 0px;
     padding: 0.5rem 0.5rem;
     margin: 1rem 0.5rem;
     position: relative;
     border: 1px solid black;
     background-color: rgba(50, 50, 50, 0.2);
     overflow: hidden;
-    transition: height 0.8s;
+    transition: height 0.8s, opacity 0.5s;
 }
 
 #education-content .institution:first-child,
@@ -141,4 +146,10 @@ main {
 
 .clearfix {
     display: block;
+}
+
+
+/*BIO*/
+#bio-content p {
+    height: 0px;
 }
